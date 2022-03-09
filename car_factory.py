@@ -22,6 +22,3 @@ class CarFactory(Car):
 
     def create_thovex(self, current_date, last_service_date, current_mileage, last_service_mileage):
         return Car(CapuletEngine(current_mileage, last_service_mileage), NubbinBattery(last_service_date, current_date))
-
-
-    
