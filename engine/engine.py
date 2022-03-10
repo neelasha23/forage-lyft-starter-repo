@@ -1,6 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
-class Engine(ABC):
+from serviceable import Serviceable
+
+
+class Engine(Serviceable):
 
     @abstractmethod
     def needs_service(self):
