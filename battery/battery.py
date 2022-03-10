@@ -1,9 +1,7 @@
-from abc import abstractmethod
-
-from serviceable import Serviceable
+from abc import ABC, abstractmethod
 
 
-class Battery(Serviceable):
+class Battery(ABC):
 
     @abstractmethod
     def needs_service(self):
