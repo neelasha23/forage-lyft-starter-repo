@@ -10,7 +10,7 @@ class TestCalliope(unittest.TestCase):
         current_mileage = 30001
         last_service_mileage = 0
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         calliope = CarFactory.create_calliope(today, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(calliope.needs_service())
 
@@ -26,7 +26,7 @@ class TestCalliope(unittest.TestCase):
         current_mileage = 3001
         last_service_mileage = 0
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         calliope = CarFactory.create_calliope(today, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(calliope.needs_service())
 
@@ -44,7 +44,7 @@ class TestGlissade(unittest.TestCase):
         current_mileage = 60001
         last_service_mileage = 0
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         glissade = CarFactory.create_glissade(today, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(glissade.needs_service())
 
@@ -60,7 +60,7 @@ class TestGlissade(unittest.TestCase):
         current_mileage = 6001
         last_service_mileage = 0
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         glissade = CarFactory.create_glissade(today, last_service_date, current_mileage, last_service_mileage)
         self.assertTrue(glissade.needs_service())
 
@@ -77,7 +77,7 @@ class TestPalindrome(unittest.TestCase):
     def test_needs_service_engine_battery(self):
         warning_light_is_on = True
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         palindrome = CarFactory.create_palindrome(today, last_service_date, warning_light_is_on)
         self.assertTrue(palindrome.needs_service())
 
@@ -91,7 +91,7 @@ class TestPalindrome(unittest.TestCase):
     def test_needs_service_battery(self):
         warning_light_is_on = False
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         palindrome = CarFactory.create_palindrome(today, last_service_date, warning_light_is_on)
         self.assertTrue(palindrome.needs_service())
 

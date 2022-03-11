@@ -23,7 +23,7 @@ class TestSpindlerBattery(unittest.TestCase):
 
     def test_needs_service(self):
         today = datetime.today().date()
-        last_service_date = today.replace(today.year - 2)
+        last_service_date = today.replace(today.year - 3)
         spindler_battery = SpindlerBattery(last_service_date, today)
         self.assertTrue(spindler_battery.needs_service())
 
